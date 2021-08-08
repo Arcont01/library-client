@@ -6,7 +6,8 @@
 
 <script>
 export default {
-  name: "register"
+  name: "Register",
+  layout: 'auth'
 }
 </script>
 
