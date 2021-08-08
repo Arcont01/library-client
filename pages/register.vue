@@ -6,6 +6,10 @@
 
 <script>
 export default {
-  name: 'Index',
+  name: "register"
 }
 </script>
+
+<style scoped>
+
+</style>
