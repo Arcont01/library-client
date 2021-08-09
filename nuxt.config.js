@@ -25,13 +25,15 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '@/assets/scss/app.scss'
+    '@/assets/scss/app.scss',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    {src: '~/plugins/axios'},
-    {src: '~/plugins/vee-validate'},
+    {src: '@/plugins/axios'},
+    {src: '@/plugins/vee-validate'},
+    {src: '@/plugins/laravel-vue-pagination'},
+    {src: '@/plugins/multiselect'},
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

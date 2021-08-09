@@ -12,22 +12,6 @@
         </nuxt-link>
 
         <b-collapse id="nav-library" is-nav>
-          <b-navbar-nav>
-            <nuxt-link
-              v-slot="{ isActive, navigate, href }"
-              :to="{ name: 'books' }"
-              custom
-            >
-              <b-nav-item :active="isActive" :href="href" @click="navigate">Books</b-nav-item>
-            </nuxt-link>
-            <nuxt-link
-              v-slot="{ isActive, navigate, href }"
-              :to="{ name: 'categories' }"
-              custom
-            >
-              <b-nav-item :active="isActive" :href="href" @click="navigate">Categories</b-nav-item>
-            </nuxt-link>
-          </b-navbar-nav>
           <b-navbar-nav class="ml-auto">
           <b-nav-item-dropdown right>
             <!-- Using 'button-content' slot -->

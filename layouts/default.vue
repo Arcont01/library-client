@@ -1,9 +1,11 @@
 <template>
   <div>
     <NavBar/>
-    <b-container>
-      <Nuxt/>
-    </b-container>
+    <main>
+      <b-container>
+        <Nuxt/>
+      </b-container>
+    </main>
   </div>
 </template>
 
