@@ -21,7 +21,8 @@
     "fibers": "^5.0.0",
     "nuxt": "^2.15.7",
     "sass": "~1.32.6",
-    "sass-loader": "10"
+    "sass-loader": "10",
+    "vee-validate": "^3.4.11"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",

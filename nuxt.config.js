@@ -19,13 +19,20 @@ export default {
     ]
   },
 
+  router: {
+    middleware: ['auth']
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '@/assets/scss/app.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    {src: '~/plugins/axios'},
+    {src: '~/plugins/vee-validate'},
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: false,
@@ -82,10 +89,10 @@ export default {
       },
     },
     redirect: {
-      login: '/login',
+      login: '/',
       logout: '/',
-      callback: '/login',
-      home: '/',
+      callback: '/',
+      home: '/books',
     },
     strategies: {
       local: {
@@ -104,15 +111,15 @@ export default {
         },
         endpoints: {
           login: {
-            url: '/auth/login',
+            url: '/login',
             method: 'post',
           },
           logout: {
-            url: '/auth/logout',
+            url: '/logout',
             method: 'delete',
           },
           user: {
-            url: '/user/me',
+            url: '/me',
             method: 'get',
           },
         },
@@ -122,6 +129,7 @@ export default {
 
   toast: {
     position: 'top-center',
+    duration: '3000',
   },
 
   styleResources: {
@@ -130,6 +138,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    transpile: ['vee-validate/dist/rules'],
     babel: {
       "presets": [
         [
